@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+            <title>2D Triangle</title>
+
+            <script type="vetex-shader/x-vertex" id= "vertex-shader">
+              attribute vec4 myPosition;
+              void main(){
+                gl_PointSie = 1.0;
+                gl_Position = myPosition;
+              }
+            </script>
+            
+            <script type= "x-shader/xfragment" id="vertex-shader">
+              void main(){
+                gl_fragColor = vec4(1.0, 1.0, 0.0, 1.0);
+              }
+
+            </script>
+
+            <script type="text/javascript" src="../Common/webgl-utils.js"></script>
+            <script type="text/javascript" src="../Common/initShaders.js"></script>
+            <script type="text/javascript" src="../Common/MV.js"></script>
+
+            <script type="text/javascript" src="simpleTriangle.js"></script>
+
+    </head>
+
+    <body onload= "drawTriangle()">
+      <canvas id= "gl-canvas" width="512" height="512"></canvas>
+    </body>
+</html>
